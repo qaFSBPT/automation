@@ -1,0 +1,21 @@
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\POCFSBPT.dll.config
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\POCFSBPT.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\POCFSBPT.pdb
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Assert.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Ionic.Zip.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Newtonsoft.Json.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\WebDriver.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\WebDriver.Support.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Assert.pdb
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\Assert.xml
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\WebDriver.xml
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\bin\Debug\WebDriver.Support.xml
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\obj\Debug\FSBPT - POC.csprojAssemblyReference.cache
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\obj\Debug\FSBPT - POC.csproj.CoreCompileInputs.cache
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\obj\Debug\FSBPT - POC.csproj.CopyComplete
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\obj\Debug\POCFSBPT.dll
+C:\Source\OPS\Xena\automation\Selenium\FSBPT Automation\POCFSBPT\obj\Debug\POCFSBPT.pdb

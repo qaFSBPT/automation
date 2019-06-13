@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSBPT - POC", "FSBPT - POC.csproj", "{3AC096D0-A1C2-E12C-1390-A8335801FDAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAC27F76-31F0-489D-B6FC-47426B99F0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC27F76-31F0-489D-B6FC-47426B99F0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC27F76-31F0-489D-B6FC-47426B99F0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC27F76-31F0-489D-B6FC-47426B99F0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ceisolutions.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = FSBPT\u0020-\u0020POC.csproj
+		SccProjectName0 = .
+		SccAuxPath0 = https://ceisolutions.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

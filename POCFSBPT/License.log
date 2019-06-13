@@ -1,0 +1,57 @@
+    ======  ======
+    Time:5/14/2018 1:53:36 PM
+    Title: Initiate log
+    Message: 
+    Time:5/14/2018 1:53:36 PM
+    Title: Initiate InternalManager
+    Message: Trying to Validate License
+    Time:5/14/2018 1:53:36 PM
+    Title: Requesting EVT
+    Message: EVTP
+    Time:5/14/2018 1:53:36 PM
+    Title: Requesting Validation
+    Message: ILMValidate
+    Time:5/14/2018 1:53:36 PM
+    Title: Requesting Validation
+    Message: ILMValidate True
+    Time:5/14/2018 1:53:36 PM
+    Title: Requesting Validation
+    Message: ILMValidate True NotTrial
+    Time:5/14/2018 1:53:36 PM
+    Title: Requested registry access is not allowed.
+    Message:    at System.ThrowHelper.ThrowSecurityException(ExceptionResource resource)
+   at Microsoft.Win32.RegistryKey.OpenSubKey(String name, Boolean writable)
+   at Telerik.Licensing.Licenser.CheckRegistryTimeStamp()
+   at Telerik.Licensing.Licenser.TryCheckLicenseExists()
+    Time:5/14/2018 1:53:36 PM
+    Title: LICENSER
+    Message: READ REGS START
+    Time:5/14/2018 1:53:36 PM
+    Title: LIC EXP_KEY
+    Message: NULL
+    Time:5/14/2018 1:53:36 PM
+    Title: LICENSER
+    Message: READ REGS SUCCESS
+    Entering constructor for: Telerik.CommonPackage.Telerik_CommonPackagePackage
+    Entering Initialize() of: Telerik.CommonPackage.Telerik_CommonPackagePackage
+    TestWindow package loaded
+    devenv.exe Information: 0 : 5/14/2018 5:53:52 PM:  - TokenCache: Deserialized 3 items to token cache.
+    Web method running: [https://app.vssps.visualstudio.com/_apis/connectionData?connectOptions=IncludeServices&lastChangeId=1594&lastChangeId64=1594] (GET)connectionData[connectionData]
+    Web method running: [https://app.vssps.visualstudio.com/_apis/connectionData?connectOptions=IncludeServices&lastChangeId=1594&lastChangeId64=1594] (GET)connectionData[connectionData]
+    Web method response: [https://app.vssps.visualstudio.com/_apis/connectionData?connectOptions=IncludeServices&lastChangeId=1594&lastChangeId64=1594] (GET)connectionData[connectionData] 398 ms
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/connectionData?connectOptions=IncludeServices&lastChangeId=38785&lastChangeId64=38785] (GET)connectionData[connectionData]
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/connectionData?connectOptions=IncludeServices&lastChangeId=38785&lastChangeId64=38785] (GET)connectionData[connectionData] 243 ms
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me?details=true&withattributes=false&coreattributes=Minimal%2CEmail%2CAvatar%2CDisplayName%2CAll] (GET)me[Profile]
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me?details=true&withattributes=false&coreattributes=Minimal%2CEmail%2CAvatar%2CDisplayName%2CAll] (GET)me[Profile] 106 ms
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Locations?profilePageType=Update] (GET)Locations[Profile]
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Locations?profilePageType=Update] (GET)Locations[Profile] 60 ms
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Settings/ProfileRefreshInterval] (GET)ProfileRefreshInterval[Profile]
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Settings/ProfileRefreshInterval] (GET)ProfileRefreshInterval[Profile] 40 ms
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Avatar?size=Small] (GET)Avatar[Profile]
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Avatar?size=Small] (GET)Avatar[Profile] 74 ms
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Attributes?partition=Core&modifiedafterrevision=0] (GET)Attributes[Profile]
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Attributes?partition=Core&modifiedafterrevision=0] (GET)Attributes[Profile] 59 ms
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Avatar?size=Small] (GET)Avatar[Profile]
+    Web method running: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Avatar?size=Large] (GET)Avatar[Profile]
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Avatar?size=Small] (GET)Avatar[Profile] 43 ms
+    Web method response: [https://vsspsextprodch1su1.vsspsext.visualstudio.com/_apis/Profile/Profiles/me/Avatar?size=Large] (GET)Avatar[Profile] 97 ms
