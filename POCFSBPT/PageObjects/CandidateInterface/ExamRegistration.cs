@@ -16,6 +16,8 @@ namespace POCFSBPT.PageObjects
     {
         private IWebDriver driver;
 
+        private string pageURL = ConfigurationManager.AppSettings["CandidateInterface"] + "/SPA/ExamRegistration#update-customer-info";
+
         public ExamRegistration(IWebDriver driver)
         {
             this.driver = driver;
@@ -72,13 +74,14 @@ namespace POCFSBPT.PageObjects
 
         [FindsByAll]
         [FindsBy(How = How.Id, Using = "Gender")]
-        [FindsBy(How = How.LinkText, Using = "Male")]
-        private IWebElement genderMale;
-
-        [FindsByAll]
-        [FindsBy(How = How.Id, Using = "Gender")]
-        [FindsBy(How = How.LinkText, Using = "Female")]
-        private IWebElement genderFemale;
+        private IWebElement gender;
+        private SelectElement selectGender
+        {
+            get
+            {
+                return new SelectElement(gender);
+            }
+        }
 
         [FindsBy(How = How.Name, Using = "PrimaryLanguage")]
         private IWebElement primaryLanguage;
@@ -108,7 +111,7 @@ namespace POCFSBPT.PageObjects
 
         [FindsBy(How = How.Id, Using = "name-confirmation")]
         private IWebElement nameConfirmationCheckbox;
-        
+
         [FindsBy(How = How.Id, Using = "AddressLine1")]
         private IWebElement addressLine1;
 
@@ -170,5 +173,264 @@ namespace POCFSBPT.PageObjects
         private IWebElement continueButton;
 
         #endregion PageElements
+
+        // Page Functions
+        #region PageFunctions
+        public void verifyPage()
+        {
+            Assert.Equals(pageURL, driver.Url);
+        }
+
+        private IWebElement getFirstName()
+        {
+            return firstName;
+        }
+
+        private IWebElement getMiddleName()
+        {
+            return middleName;
+        }
+
+        private IWebElement getLastName()
+        {
+            return lastName;
+        }
+
+        private IWebElement getDateOfBirth()
+        {
+            return dateOfBirth;
+        }
+
+        private IWebElement getEmail()
+        {
+            return email;
+        }
+
+        private IWebElement getSecondaryEmail()
+        {
+            return secondaryEmail;
+        }
+
+        private IWebElement getMobilePhone()
+        {
+            return mobilePhone;
+        }
+
+        private IWebElement getHomePhone()
+        {
+            return homePhone;
+        }
+
+        private IWebElement getWorkPhone()
+        {
+            return workPhone;
+        }
+
+        private IWebElement getExtension()
+        {
+            return workPhoneExtension;
+        }
+
+        private IWebElement getGender()
+        {
+            return gender;
+        }
+
+        private IWebElement getNativeLanguage()
+        {
+            return primaryLanguage;
+        }
+
+        private IWebElement getOtherLanguage()
+        {
+            return otherPrimaryLanguage;
+        }
+
+        private IWebElement getEthnicity()
+        {
+            return ethnicity;
+        }
+
+        private IWebElement getOtherEthnicity()
+        {
+            return otherEthnicity;
+        }
+
+        private IWebElement getAddressLine1()
+        {
+            return addressLine1;
+        }
+
+        private IWebElement getAddressLine2()
+        {
+            return addressLine2;
+        }
+
+        private IWebElement getCountry()
+        {
+            return country;
+        }
+
+        private IWebElement getCity()
+        {
+            return city;
+        }
+
+        private IWebElement getStateProvince()
+        {
+            return stateProvince;
+        }
+
+        private IWebElement getUSPostalCode()
+        {
+            return usPostalCode;
+        }
+
+        private IWebElement getCanadianPostalCode()
+        {
+            return canadianPostalCode;
+        }
+
+        private IWebElement getOtherPostalCode()
+        {
+            return otherPostalCode;
+        }
+
+        private IWebElement getZipPlus4()
+        {
+            return zipPlus4;
+        }
+
+        public void TypeFirstName(string name)
+        {
+            getFirstName().SendKeys(name);
+        }
+
+        public void TypeMiddleName(string name)
+        {
+            getMiddleName().SendKeys(name);
+        }
+
+        public void TypeLastName(string name)
+        {
+            getLastName().SendKeys(name);
+        }
+
+        public void TypeDateOfBirth(string dob)
+        {
+            getDateOfBirth().SendKeys(dob);
+        }
+
+        public void TypePrimaryEmail(string email)
+        {
+            getEmail().SendKeys(email);
+        }
+
+        public void TypeSecondaryEmail(string email)
+        {
+            getSecondaryEmail().SendKeys(email);
+        }
+
+        public void TypeMobilePhone(string number)
+        {
+            getMobilePhone().SendKeys(number);
+        }
+
+        public void TypeHomePhone(string number)
+        {
+            getHomePhone().SendKeys(number);
+        }
+
+        public void TypeWorkPhone(string number)
+        {
+            getWorkPhone().SendKeys(number);
+        }
+
+        public void TypeWorkExtension(string number)
+        {
+            getExtension().SendKeys(number);
+        }
+
+        public void TypeAddressLine1(string address)
+        {
+            getAddressLine1().SendKeys(address);
+        }
+
+        public void TypeAddressLine2(string address)
+        {
+            getAddressLine2().SendKeys(address);
+        }
+
+        public void TypeCity(string city)
+        {
+            getCity().SendKeys(city);
+        }
+
+        public void TypeUSPostalCode(string address)
+        {
+            getUSPostalCode().SendKeys(address);
+        }
+
+        public void TypeCanadianPostalCode(string address)
+        {
+            getCanadianPostalCode().SendKeys(address);
+        }
+
+        public void TypeOtherPostalCode(string address)
+        {
+            getOtherPostalCode().SendKeys(address);
+        }
+
+        public void TypeZipPlus4(string address)
+        {
+            getZipPlus4().SendKeys(address);
+        }
+
+        public void SelectGenderMale()
+        {
+            selectGender.SelectByText("Male");
+        }
+
+        public void SelectGenderFemale()
+        {
+            selectGender.SelectByText("Female");
+        }
+
+        public void CheckNameValidation()
+        {
+            nameConfirmationCheckbox.Click();
+        }
+
+        public void SelectReleaseYes()
+        {
+            yesReleaseNPTEScores.Click();
+        }
+
+        public void SelectReleaseNo()
+        {
+            noReleaseNPTEScores.Click();
+        }
+
+        public void ClickCancel()
+        {
+            cancelButton.Click();
+        }
+
+        public void ClickContinue()
+        {
+            continueButton.Click();
+        }
+
+        public void SelectNotificationsYes()
+        {
+            receiveTextYes.Click();
+        }
+
+        public void SelectNotificationsNo()
+        {
+            receiveTextNo.Click();
+        }
+
+        #endregion PageFunctions
     }
 }

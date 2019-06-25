@@ -30,9 +30,9 @@ namespace POCFSBPT.PageObjects
             this.driver = driver;
             PageFactory.InitElements(driver, this);
         }
-
-        #region PageElements
+       
         // Page Elements
+        #region PageElements
         [FindsBy(How = How.Id, Using = "ssn-option")]
         private IWebElement ssnOption;
 
@@ -109,6 +109,8 @@ namespace POCFSBPT.PageObjects
 
         [FindsBy(How = How.Id, Using = "ConfirmPassword-error")]
         private IWebElement confPasswordError;
+
+        #endregion PageElements
 
         // Page Functions
         #region PageFunctions
@@ -191,9 +193,6 @@ namespace POCFSBPT.PageObjects
         {
             confPassword = value;
         }
-
-        #endregion PageElements
-
 
         public void goToAccountCreationPage()
         {
