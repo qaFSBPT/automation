@@ -153,7 +153,22 @@ namespace POCFSBPT.PageObjects
         [FindsBy(How = How.Id, Using = "Zip4")]
         private IWebElement zipPlus4;
 
-        // [FindsBy(How = How.CssSelector, Using = "span#btn[.btn-group > :first-child:not(.dropdown-toggle):not(:last-child).btn {border - top - right - radius: 0px; border - bottom - right - radius: 0px;}")]
+        [FindsByAll]
+        [FindsBy(How = How.CssSelector, Using = "label#Active: SchoolAuthorizeNPTEScoreRelease()==false")]
+        [FindsBy(How = How.LinkText, Using = "No")]
+        private IWebElement noReleaseNPTEScores;
+
+        [FindsByAll]
+        [FindsBy(How = How.CssSelector, Using = "label#Active: SchoolAuthorizeNPTEScoreRelease()")]
+        [FindsBy(How = How.LinkText, Using = "Yes")]
+        private IWebElement yesReleaseNPTEScores;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='main - body']/div[3]/div/div[1]/button")]
+        private IWebElement cancelButton;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='updateProfile']")]
+        private IWebElement continueButton;
+
         #endregion PageElements
     }
 }
