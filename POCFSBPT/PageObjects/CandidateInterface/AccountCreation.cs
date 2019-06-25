@@ -110,6 +110,8 @@ namespace POCFSBPT.PageObjects
         [FindsBy(How = How.Id, Using = "ConfirmPassword-error")]
         private IWebElement confPasswordError;
 
+        // Page Functions
+        #region PageFunctions
         private IWebElement GetSsn()
         {
             return ssn;
@@ -192,8 +194,7 @@ namespace POCFSBPT.PageObjects
 
         #endregion PageElements
 
-        // Page Functions
-        #region PageFunctions
+
         public void goToAccountCreationPage()
         {
             driver.Navigate().GoToUrl(pageURL);
