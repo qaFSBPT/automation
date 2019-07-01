@@ -80,6 +80,7 @@
     <Compile Include="PageObjects\CandidateInterface\AccountCreation.cs" />
     <Compile Include="PageObjects\CandidateInterface\CandidateHome.cs" />
     <Compile Include="PageObjects\CandidateInterface\ExamRegistration.cs" />
+    <Compile Include="PageObjects\CandidateInterface\ExamRegistrationPage2.cs" />
     <Compile Include="PageObjects\CandidateInterface\PEATRegistration.cs" />
     <Compile Include="PageObjects\CompactInterface\CompactDashboard.cs" />
     <Compile Include="PageObjects\CompactInterface\CompactHome.cs" />
