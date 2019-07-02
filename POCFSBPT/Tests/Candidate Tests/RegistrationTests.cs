@@ -19,10 +19,12 @@ namespace POCFSBPT.Tests.Candidate_Tests
     {
 
         private IWebDriver driver;
+        
 
         [TestInitialize]
         public void Setup()
         {
+            
             driver = new InternetExplorerDriver();
             CandidateHome page = new CandidateHome(driver);
             page.goToCandidateHomePage();
@@ -32,6 +34,20 @@ namespace POCFSBPT.Tests.Candidate_Tests
         [TestMethod]
         public void Registration_NonCAPTE()
         {
+            AccountCreation createAccount = new AccountCreation(driver);
+            createAccount.goToAccountCreationPage();
+            
+            createAccount.SelectCountryOfEducation("USA");
+            createAccount.SelectSchool("Unknown");
+            createAccount.SelectDegreeLevel("Associates");
+            createAccount.TypeInGraduationDate("1/1/2018");
+            string name = "bob jones";
+            string[] names = name.Split();
+
+            createAccount.TypeInLastName(names[1]);
+            createAccount.TypeInFirstName(names[0]);
+            createAccount.selectSSN();
+            createAccount.TypeInSSN("123456789");
             driver.CreateNonCAPTEUser("bob jones");
         }
     }

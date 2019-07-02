@@ -28,3 +28,21 @@ C:\Users\Joshua\Source\Repos\Automation\POCFSBPT\obj\Debug\FSBPT - POC.csproj.Co
 C:\Users\Joshua\Source\Repos\Automation\POCFSBPT\obj\Debug\FSBPT - POC.csproj.CopyComplete
 C:\Users\Joshua\Source\Repos\Automation\POCFSBPT\obj\Debug\POCFSBPT.dll
 C:\Users\Joshua\Source\Repos\Automation\POCFSBPT\obj\Debug\POCFSBPT.pdb
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\POCFSBPT.dll.config
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\POCFSBPT.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\POCFSBPT.pdb
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\Assert.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\Ionic.Zip.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\WebDriver.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\WebDriver.Support.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\Assert.pdb
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\Assert.xml
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\WebDriver.xml
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\bin\Debug\WebDriver.Support.xml
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\obj\Debug\FSBPT - POC.csprojAssemblyReference.cache
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\obj\Debug\FSBPT - POC.csproj.CoreCompileInputs.cache
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\obj\Debug\FSBPT - POC.csproj.CopyComplete
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\obj\Debug\POCFSBPT.dll
+C:\Users\jmurdough\Source\Repos\Automation\POCFSBPT\obj\Debug\POCFSBPT.pdb

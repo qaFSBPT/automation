@@ -15,6 +15,7 @@ namespace POCFSBPT.PageObjects
     class AccountCreation :CandidateHome
     {
         private IWebDriver driver;
+        
 
         // Error Message Strings
 
@@ -28,11 +29,12 @@ namespace POCFSBPT.PageObjects
         public AccountCreation(IWebDriver driver) : base(driver)
         {
             this.driver = driver;
-            PageFactory.InitElements(driver, this);
+            //PageFactory.InitElements(driver, this);
         }
        
         // Page Elements
         #region PageElements
+       
         [FindsBy(How = How.Id, Using = "ssn-option")]
         private IWebElement ssnOption;
 
@@ -114,6 +116,12 @@ namespace POCFSBPT.PageObjects
 
         // Page Functions
         #region PageFunctions
+
+        private IWebElement getSSNSelect()
+        {
+            return ssnOption;
+        }
+
         private IWebElement GetSsn()
         {
             return ssn;
@@ -206,7 +214,7 @@ namespace POCFSBPT.PageObjects
 
         public void selectSSN()
         {
-            ssnOption.Click();
+            getSSNSelect().Click();
         }
 
         public void SelectAIN()

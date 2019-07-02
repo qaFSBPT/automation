@@ -19,7 +19,7 @@ namespace POCFSBPT.PageObjects
         public CandidateHome(IWebDriver driver)
         {
             this.driver = driver;
-            PageFactory.InitElements(driver, this);
+           // PageFactory.InitElements(driver, this);
         }
 
         // Page Elements
