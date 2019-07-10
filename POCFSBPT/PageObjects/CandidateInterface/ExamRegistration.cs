@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -14,11 +15,11 @@ namespace POCFSBPT.PageObjects
 {
     class ExamRegistration
     {
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
         private string pageURL = ConfigurationManager.AppSettings["CandidateInterface"] + "/SPA/ExamRegistration#update-customer-info";
 
-        public ExamRegistration(IWebDriver driver)
+        public ExamRegistration(RemoteWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

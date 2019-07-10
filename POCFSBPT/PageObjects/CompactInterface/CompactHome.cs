@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AssertLibrary;
+using OpenQA.Selenium.Remote;
 
 namespace POCFSBPT.PageObjects
 {
     public class CompactHome
     {
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
         // Error Strings
 
@@ -22,7 +23,7 @@ namespace POCFSBPT.PageObjects
         private string emptyPass = "The Password field is required.";
         private string pageURL = ConfigurationManager.AppSettings["CompactInterface"];
 
-        public CompactHome(IWebDriver driver)
+        public CompactHome(RemoteWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

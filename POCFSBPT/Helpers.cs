@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using POCFSBPT.PageObjects;
+using OpenQA.Selenium.Remote;
 
 namespace Helpers
 {
@@ -14,13 +15,14 @@ namespace Helpers
         // Expects: Candidate Home Page to be loaded
         // Ends: Candidate Dashboard for the newly created user
 
-        public static void CreateNonCAPTEUser(this IWebDriver driver, string name)
+        public static void CreateNonCAPTEUser(this RemoteWebDriver driver, string name)
         {
             AccountCreation createAccount = new AccountCreation(driver);
-            createAccount.goToAccountCreationPage();
+            //createAccount.goToAccountCreationPage();
+            
+            createAccount.SelectCountryOfEducation("USA");
             createAccount.selectSSN();
             createAccount.TypeInSSN("123456789");
-            createAccount.SelectCountryOfEducation("USA");
             createAccount.SelectSchool("Unknown");
             createAccount.SelectDegreeLevel("Associates");
             createAccount.TypeInGraduationDate("1/1/2018");
@@ -33,5 +35,7 @@ namespace Helpers
 
 
         }
+
+
     }
 }

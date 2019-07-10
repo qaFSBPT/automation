@@ -7,17 +7,18 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium.Remote;
 
 namespace POCFSBPT.PageObjects
 {
     class SchoolHome
     {
 
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
         private string pageURL = ConfigurationManager.AppSettings["SchoolInterface"];
 
-        public SchoolHome(IWebDriver driver)
+        public SchoolHome(RemoteWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace POCFSBPT.Utilities
 {
     class Utilities
     {
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
         public bool IsElementPresent(By locator)
         {

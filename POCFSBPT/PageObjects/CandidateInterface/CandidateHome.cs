@@ -1,5 +1,6 @@
 ﻿using AssertLibrary;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -12,35 +13,34 @@ namespace POCFSBPT.PageObjects
 {
     class CandidateHome
     {
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
-        private string pageURL = ConfigurationManager.AppSettings["CandidateInterface"];
+        private readonly string pageURL = ConfigurationManager.AppSettings["CandidateInterface"];
 
-        public CandidateHome(IWebDriver driver)
+        public CandidateHome(RemoteWebDriver driver)
         {
             this.driver = driver;
-           // PageFactory.InitElements(driver, this);
+
         }
 
         // Page Elements
+        #region PageElements
+         private IWebElement fsbptid => driver.FindElementById("FsbptId");
 
-        [FindsBy(How = How.Id, Using = "FsbptId")]
-        private IWebElement fsbptid;
+         private IWebElement password => driver.FindElementById("Password");
 
-        [FindsBy(How = How.Id, Using = "Password")]
-        private IWebElement password;
+        private IWebElement loginbutton => driver.FindElementById("login-button");
 
-        [FindsBy(How = How.Id, Using = "login-button")]
-        private IWebElement loginbutton;
+        private IWebElement fsbptiderror => driver.FindElementById("FsbptId-error");
 
-        [FindsBy(How = How.Id, Using = "FsbptId-error")]
-        public IWebElement fsbptiderror;
+        private IWebElement createLink => driver.FindElementByXPath("//*[@id='LoginForm']/div/div[1]/div[2]/div/div/div/div[2]/ul/li[2]/a");
+        #endregion PageElements
 
         // Page Functions
-
+        #region PageFunctions
         public void goToCandidateHomePage()
         {
-            driver.Navigate().GoToUrl(pageURL);
+           driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["CandidateInterface"]);
         }
 
         public void VerifyPage()
@@ -52,5 +52,11 @@ namespace POCFSBPT.PageObjects
         {
             return element.Displayed && element.Enabled;
         }
+
+        public void ClickCreateAccountLink()
+        {
+            createLink.Click();
+        }
+        #endregion PageFunctions
     }
 }

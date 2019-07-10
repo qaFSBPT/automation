@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -10,11 +11,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace POCFSBPT.PageObjects
 {
-    class AccountCreation :CandidateHome
+    class AccountCreation
     {
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
         
 
         // Error Message Strings
@@ -26,96 +28,66 @@ namespace POCFSBPT.PageObjects
         public static string pageURL = ConfigurationManager.AppSettings["CandidateInterface"] + "/Account/Register";
 
 
-        public AccountCreation(IWebDriver driver) : base(driver)
+        public AccountCreation(RemoteWebDriver driver)
         {
             this.driver = driver;
-            //PageFactory.InitElements(driver, this);
+           
         }
-       
+
         // Page Elements
         #region PageElements
-       
-        [FindsBy(How = How.Id, Using = "ssn-option")]
-        private IWebElement ssnOption;
 
-        [FindsBy(How = How.Id, Using = "Ssn")]
-        private IWebElement ssn;
+        private IWebElement ssnOption => driver.FindElementByXPath("//*[@id=\"ssn-option\"]");
 
-        [FindsBy(How = How.Id, Using = "Ssn-error")]
-        private IWebElement ssnError;
-
-        [FindsBy(How = How.Id, Using = "ain-option")]
-        private IWebElement ainOption;
-
-        [FindsBy(How = How.Id, Using = "CountryOfEducation")]
-        private IWebElement countryOfEducation;
-        private SelectElement selectCountryOfEducation
-        {
-            get
-            {
-                return new SelectElement(countryOfEducation);
-            }
-        }
-
-        [FindsBy(How = How.ClassName, Using = "k-input")]
-        private IWebElement school;
-
-        [FindsBy(How = How.ClassName, Using = "k-i-arrow-s")]
-        private IWebElement schoolArrow;
-
-        [FindsBy(How = How.ClassName, Using = "k-item")]
-        private List<IWebElement> schoolNameInList;
+        private IWebElement ssn => driver.FindElementById("Ssn");
         
-        [FindsBy(How = How.Id, Using = "GraduationDate")]
-        private IWebElement graduationDate;
+        private IWebElement ssnError => driver.FindElementById("Ssn-error");
 
-        [FindsBy(How = How.Id, Using = "GraduationDate-error")]
-        private IWebElement graduationDateError;
+        private IWebElement ainOption => driver.FindElementById("ain-option");
 
-        [FindsBy(How = How.Id, Using = "DegreeLevel")]
-        private IWebElement degreeLevel;
-        private SelectElement selectDegreeLevel
-        {
-            get
-            {
-                return new SelectElement(degreeLevel);
-            }
-        }
+        private IWebElement countryOfEducation => driver.FindElementById("CountryOfEductaion");
+        
+        private IWebElement school => driver.FindElementByClassName("k-input");
 
-        [FindsBy(How = How.Id, Using = "FirstName")]
-        private IWebElement firstName;
+        private IWebElement schoolArrow => driver.FindElementByClassName("k-i-arrow-s");
 
-        [FindsBy(How = How.Id, Using = "LastName")]
-        private IWebElement lastName;
+        private IWebElement schoolNameInList => driver.FindElementByClassName("k-i-arrow-s");
+        
+        private IWebElement graduationDate => driver.FindElementById("GraduationDate");
 
-        [FindsBy(How = How.Id, Using = "Email")]
-        private IWebElement email;
+        private IWebElement graduationDateError => driver.FindElementById("GraduationDate-error");
 
-        [FindsBy(How = How.Id, Using = "Email-error")]
-        private IWebElement emailError;
+        private IWebElement degreeLevel => driver.FindElementById("DegreeLevel");
 
-        [FindsBy(How = How.Id, Using = "DateOfBirth")]
-        private IWebElement dob;
+        private IWebElement firstName => driver.FindElementById("FirstName");
 
-        [FindsBy(How = How.Id, Using = "DateOfBirth-error")]
-        private IWebElement dobError;
+        private IWebElement lastName => driver.FindElementById("LastName");
 
-        [FindsBy(How = How.Id, Using = "Password")]
-        private IWebElement password;
+        private IWebElement email => driver.FindElementById("Email");
 
-        [FindsBy(How = How.Id, Using = "Password-error")]
-        private IWebElement passwordError;
+        private IWebElement emailError => driver.FindElementById("Email-error");
 
-        [FindsBy(How = How.Id, Using = "ConfirmPassword")]
-        private IWebElement confPassword;
+        private IWebElement dob => driver.FindElementById("DateOfBirth");
 
-        [FindsBy(How = How.Id, Using = "ConfirmPassword-error")]
-        private IWebElement confPasswordError;
+        private IWebElement dobError => driver.FindElementById("DateOfBirth-error");
+
+        private IWebElement password => driver.FindElementById("Password");
+        
+        private IWebElement passwordError => driver.FindElementById("Password-error");
+
+        private IWebElement confPassword => driver.FindElementById("ConfirmPassword");
+        
+        private IWebElement confPasswordError => driver.FindElementById("ConfirmPassword-error");
 
         #endregion PageElements
 
         // Page Functions
         #region PageFunctions
+
+        public void VerifyPage()
+        {
+            Assert.Equals(pageURL, driver.Url);
+        }
 
         private IWebElement getSSNSelect()
         {
@@ -127,9 +99,9 @@ namespace POCFSBPT.PageObjects
             return ssn;
         }
 
-        private void SetSsn(IWebElement value)
+        private void SetSsn(string value)
         {
-            ssn = value;
+            ssn.SendKeys(value);
         }
 
         public IWebElement GetGraduationDate()
@@ -137,9 +109,9 @@ namespace POCFSBPT.PageObjects
             return graduationDate;
         }
 
-        public void SetGraduationDate(IWebElement value)
+        public void SetGraduationDate(string value)
         {
-            graduationDate = value;
+            graduationDate.SendKeys(value);
         }
 
         public IWebElement GetFirstName()
@@ -147,9 +119,9 @@ namespace POCFSBPT.PageObjects
             return firstName;
         }
 
-        public void SetFirstName(IWebElement value)
+        public void SetFirstName(string value)
         {
-            firstName = value;
+            firstName.SendKeys(value);
         }
 
         public IWebElement GetLastName()
@@ -157,9 +129,9 @@ namespace POCFSBPT.PageObjects
             return lastName;
         }
 
-        public void SetLastName(IWebElement value)
+        public void SetLastName(string value)
         {
-            lastName = value;
+            lastName.SendKeys(value);
         }
 
         public IWebElement GetEmail()
@@ -167,9 +139,9 @@ namespace POCFSBPT.PageObjects
             return email;
         }
 
-        public void SetEmail(IWebElement value)
+        public void SetEmail(string value)
         {
-            email = value;
+            email.SendKeys(value);
         }
 
         public IWebElement GetDob()
@@ -177,9 +149,9 @@ namespace POCFSBPT.PageObjects
             return dob;
         }
 
-        public void SetDob(IWebElement value)
+        public void SetDob(string value)
         {
-            dob = value;
+            dob.SendKeys(value);
         }
 
         public IWebElement GetPassword()
@@ -187,9 +159,9 @@ namespace POCFSBPT.PageObjects
             return password;
         }
 
-        public void SetPassword(IWebElement value)
+        public void SetPassword(string value)
         {
-            password = value;
+            password.SendKeys(value);
         }
 
         public IWebElement GetConfPassword()
@@ -197,9 +169,9 @@ namespace POCFSBPT.PageObjects
             return confPassword;
         }
 
-        public void SetConfPassword(IWebElement value)
+        public void SetConfPassword(string value)
         {
-            confPassword = value;
+            confPassword.SendKeys(value);
         }
 
         public void goToAccountCreationPage()
@@ -214,7 +186,7 @@ namespace POCFSBPT.PageObjects
 
         public void selectSSN()
         {
-            getSSNSelect().Click();
+           ssnOption.Click();
         }
 
         public void SelectAIN()
@@ -249,7 +221,10 @@ namespace POCFSBPT.PageObjects
 
         public void SelectCountryOfEducation(string country)
         {
-            selectCountryOfEducation.SelectByText(country);
+        
+        SelectElement selectCountryOfEducation = new SelectElement(countryOfEducation);
+            
+        selectCountryOfEducation.SelectByText(country);
         }
 
         public void TypeInGraduationDate(string date)
@@ -279,6 +254,8 @@ namespace POCFSBPT.PageObjects
 
         public void SelectDegreeLevel(string degree)
         {
+            SelectElement selectDegreeLevel = new SelectElement(degreeLevel);
+
             selectDegreeLevel.SelectByText(degree);
         }
 
@@ -297,7 +274,7 @@ namespace POCFSBPT.PageObjects
             schoolArrow.Click();
             school.SendKeys(schoolname);
             
-            schoolNameInList.First().Click();
+            schoolNameInList.Click();
 
         }
 
@@ -305,9 +282,7 @@ namespace POCFSBPT.PageObjects
         {
             while (!graduationDate.Enabled) { }
         }
-
         
-
         private void ValidateSSNError(string err)
         {
             Assert.IsTrue(AssertPresent(ssnError));
@@ -343,6 +318,12 @@ namespace POCFSBPT.PageObjects
             Assert.IsTrue(AssertPresent(confPasswordError));
             Assert.IsTrue(confPasswordError.Text.Contains(err));
         }
+
+        public bool AssertPresent(IWebElement element)
+        {
+            return element.Displayed && element.Enabled;
+        }
+
 
         #endregion PageFunctions
     }

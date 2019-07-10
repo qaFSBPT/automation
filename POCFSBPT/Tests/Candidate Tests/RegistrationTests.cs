@@ -9,8 +9,7 @@ using OpenQA.Selenium.IE;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using POCFSBPT.PageObjects;
 using Helpers;
-
-
+using OpenQA.Selenium.Remote;
 
 namespace POCFSBPT.Tests.Candidate_Tests
 {
@@ -18,7 +17,7 @@ namespace POCFSBPT.Tests.Candidate_Tests
     public class RegistrationTests
     {
 
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
         
 
         [TestInitialize]
@@ -34,20 +33,13 @@ namespace POCFSBPT.Tests.Candidate_Tests
         [TestMethod]
         public void Registration_NonCAPTE()
         {
-            AccountCreation createAccount = new AccountCreation(driver);
-            createAccount.goToAccountCreationPage();
-            
-            createAccount.SelectCountryOfEducation("USA");
-            createAccount.SelectSchool("Unknown");
-            createAccount.SelectDegreeLevel("Associates");
-            createAccount.TypeInGraduationDate("1/1/2018");
-            string name = "bob jones";
-            string[] names = name.Split();
+            CandidateHome page = new CandidateHome(driver);
+            page.ClickCreateAccountLink();
 
-            createAccount.TypeInLastName(names[1]);
-            createAccount.TypeInFirstName(names[0]);
-            createAccount.selectSSN();
-            createAccount.TypeInSSN("123456789");
+
+            AccountCreation page2 = new AccountCreation(driver);
+            //page2.VerifyPage();
+
             driver.CreateNonCAPTEUser("bob jones");
         }
     }

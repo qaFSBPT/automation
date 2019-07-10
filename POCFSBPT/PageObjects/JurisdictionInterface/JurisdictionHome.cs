@@ -1,5 +1,6 @@
 ﻿using AssertLibrary;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,11 @@ namespace POCFSBPT.PageObjects
     class JurisdictionHome
     {
 
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
         private string pageURL = ConfigurationManager.AppSettings["JurisdictionInterface"];
 
-        public JurisdictionHome(IWebDriver driver)
+        public JurisdictionHome(RemoteWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

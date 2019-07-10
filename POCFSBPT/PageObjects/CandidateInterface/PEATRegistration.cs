@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -14,9 +15,9 @@ namespace POCFSBPT.PageObjects
 {
     class PEATRegistration :ExamRegistration
     {
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
-        public PEATRegistration(IWebDriver driver) : base(driver)
+        public PEATRegistration(RemoteWebDriver driver) : base(driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);

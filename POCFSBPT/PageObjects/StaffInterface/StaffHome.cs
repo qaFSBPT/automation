@@ -7,20 +7,21 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium.Remote;
 
 namespace POCFSBPT.PageObjects
 {
     class StaffHome
     {
 
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
         private string pageURL = ConfigurationManager.AppSettings["StaffInterface"];
 
-        public StaffHome(IWebDriver driver)
+        public StaffHome(RemoteWebDriver driver)
         {
             this.driver = driver;
-            PageFactory.InitElements(driver, this);
+            
         }
 
         // Page Elements

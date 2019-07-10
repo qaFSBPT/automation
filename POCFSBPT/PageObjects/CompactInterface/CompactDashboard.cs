@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,11 @@ namespace POCFSBPT.PageObjects
     class CompactDashboard
     {
 
-        private IWebDriver driver;
+        private RemoteWebDriver driver;
 
         private string pageURL = ConfigurationManager.AppSettings["CompactInterface"];
 
-        public CompactDashboard(IWebDriver driver)
+        public CompactDashboard(RemoteWebDriver driver)
         {
             this.driver = driver;
             PageFactory.InitElements(driver, this);
