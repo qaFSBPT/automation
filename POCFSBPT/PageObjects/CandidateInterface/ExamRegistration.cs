@@ -22,60 +22,40 @@ namespace POCFSBPT.PageObjects
         public ExamRegistration(RemoteWebDriver driver)
         {
             this.driver = driver;
-            PageFactory.InitElements(driver, this);
+            
         }
 
         // Page Elements
         #region PageElements
-        [FindsBy(How = How.Id, Using = "FirstName")]
-        private IWebElement firstName;
+        private IWebElement firstName => driver.FindElementById("FirstName");
 
-        [FindsBy(How = How.Id, Using = "MiddleName")]
-        private IWebElement middleName;
+        private IWebElement middleName => driver.FindElementById("MiddleName");
 
-        [FindsBy(How = How.Id, Using = "LastName")]
-        private IWebElement lastName;
+        private IWebElement lastName => driver.FindElementById("LastName");
 
-        [FindsBy(How = How.Id, Using = "MothersMaidenName")]
-        private IWebElement mothersMaidenName;
+        private IWebElement mothersMaidenName => driver.FindElementById("MothersMaidenName");
 
-        [FindsBy(How = How.Id, Using = "birthdate")]
-        private IWebElement dateOfBirth;
+        private IWebElement dateOfBirth => driver.FindElementById("birthdate");
 
-        [FindsBy(How = How.Id, Using = "SSN")]
-        private IWebElement ssn;
+        private IWebElement ssn => driver.FindElementById("SSN");
 
-        [FindsBy(How = How.Id, Using = "Email")]
-        private IWebElement email;
+        private IWebElement email => driver.FindElementById("Email");
 
-        [FindsBy(How = How.Id, Using = "SecondaryEmail")]
-        private IWebElement secondaryEmail;
+        private IWebElement secondaryEmail => driver.FindElementById("SecondaryEmail");
 
-        [FindsBy(How = How.Id, Using = "MobilePhone")]
-        private IWebElement mobilePhone;
+        private IWebElement mobilePhone => driver.FindElementById("MobilePhone");
 
-        [FindsBy(How = How.Id, Using = "HomePhone")]
-        private IWebElement homePhone;
+        private IWebElement homePhone => driver.FindElementById("FirstName");
 
-        [FindsByAll]
-        [FindsBy(How = How.Id, Using = "ReceiveTextMessages")]
-        [FindsBy(How = How.LinkText, Using = "Yes")]
-        private IWebElement receiveTextYes;
+        private IWebElement receiveTextYes => driver.FindElementByLinkText("Yes");
 
-        [FindsByAll]
-        [FindsBy(How = How.Id, Using = "ReceiveTextMessages")]
-        [FindsBy(How = How.LinkText, Using = "No")]
-        private IWebElement receiveTextNo;
+        private IWebElement receiveTextNo => driver.FindElementByLinkText("No");
 
-        [FindsBy(How = How.Id, Using = "WorkPhone")]
-        private IWebElement workPhone;
+        private IWebElement workPhone => driver.FindElementById("WorkPhone");
 
-        [FindsBy(How = How.Id, Using = "WorkPhoneExtension")]
-        private IWebElement workPhoneExtension;
+        private IWebElement workPhoneExtension => driver.FindElementById("WorkPhoneExtension");
 
-        [FindsByAll]
-        [FindsBy(How = How.Id, Using = "Gender")]
-        private IWebElement gender;
+        private IWebElement gender => driver.FindElementById("Gender");
         private SelectElement selectGender
         {
             get
@@ -84,8 +64,7 @@ namespace POCFSBPT.PageObjects
             }
         }
 
-        [FindsBy(How = How.Name, Using = "PrimaryLanguage")]
-        private IWebElement primaryLanguage;
+        private IWebElement primaryLanguage => driver.FindElementByName("PrimaryLanguage");
         private SelectElement selectPrimaryLanguage
         {
             get
@@ -93,12 +72,10 @@ namespace POCFSBPT.PageObjects
                 return new SelectElement(primaryLanguage);
             }
         }
+        
+        private IWebElement otherPrimaryLanguage => driver.FindElementById("OtherPrimaryLanguage");
 
-        [FindsBy(How = How.Id, Using = "OtherPrimaryLanguage")]
-        private IWebElement otherPrimaryLanguage;
-
-        [FindsBy(How = How.Id, Using = "Ethnicity")]
-        private IWebElement ethnicity;
+        private IWebElement ethnicity => driver.FindElementById("Ethnicity");
         private SelectElement selectEthnicity
         {
             get
@@ -106,21 +83,16 @@ namespace POCFSBPT.PageObjects
                 return new SelectElement(ethnicity);
             }
         }
+        
+        private IWebElement otherEthnicity => driver.FindElementById("OtherEthnicity");
 
-        [FindsBy(How = How.Id, Using = "OtherEthnicity")]
-        private IWebElement otherEthnicity;
+        private IWebElement nameConfirmationCheckbox => driver.FindElementById("name-confirmation");
 
-        [FindsBy(How = How.Id, Using = "name-confirmation")]
-        private IWebElement nameConfirmationCheckbox;
+        private IWebElement addressLine1 => driver.FindElementById("AddressLine1");
 
-        [FindsBy(How = How.Id, Using = "AddressLine1")]
-        private IWebElement addressLine1;
+        private IWebElement addressLine2 => driver.FindElementById("AddressLine2");
 
-        [FindsBy(How = How.Id, Using = "AddressLine2")]
-        private IWebElement addressLine2;
-
-        [FindsBy(How = How.Id, Using = "Counrty")]
-        private IWebElement country;
+        private IWebElement country => driver.FindElementById("Country");
         private SelectElement selectCountry
         {
             get
@@ -129,11 +101,9 @@ namespace POCFSBPT.PageObjects
             }
         }
 
-        [FindsBy(How = How.Id, Using = "City")]
-        private IWebElement city;
+        private IWebElement city => driver.FindElementById("City");
 
-        [FindsBy(How = How.Id, Using = "StateProvince")]
-        private IWebElement stateProvince;
+        private IWebElement stateProvince => driver.FindElementById("StateProvince");
         private SelectElement selectStateProvince
         {
             get
@@ -142,36 +112,23 @@ namespace POCFSBPT.PageObjects
             }
         }
 
-        [FindsBy(How = How.Id, Using = "OtherState")]
-        private IWebElement otherState;
+        private IWebElement otherState => driver.FindElementById("OtherState");
 
-        [FindsBy(How = How.Id, Using = "USPostalCode")]
-        private IWebElement usPostalCode;
+        private IWebElement usPostalCode => driver.FindElementById("USPostalCode");
 
-        [FindsBy(How = How.Id, Using = "CanadianPostalCode")]
-        private IWebElement canadianPostalCode;
+        private IWebElement canadianPostalCode => driver.FindElementById("CanadianPostalCode");
 
-        [FindsBy(How = How.Id, Using = "OtherPostalCode")]
-        private IWebElement otherPostalCode;
+        private IWebElement otherPostalCode => driver.FindElementById("OtherPostalCode");
 
-        [FindsBy(How = How.Id, Using = "Zip4")]
-        private IWebElement zipPlus4;
+        private IWebElement zipPlus4 => driver.FindElementById("Zip4");
 
-        [FindsByAll]
-        [FindsBy(How = How.CssSelector, Using = "label#Active: SchoolAuthorizeNPTEScoreRelease()==false")]
-        [FindsBy(How = How.LinkText, Using = "No")]
-        private IWebElement noReleaseNPTEScores;
+        private IWebElement noReleaseNPTEScores => driver.FindElementByCssSelector("label#Active: SchoolAuthorizeNPTEScoreRelease()==false");
 
-        [FindsByAll]
-        [FindsBy(How = How.CssSelector, Using = "label#Active: SchoolAuthorizeNPTEScoreRelease()")]
-        [FindsBy(How = How.LinkText, Using = "Yes")]
-        private IWebElement yesReleaseNPTEScores;
+        private IWebElement yesReleaseNPTEScores => driver.FindElementByCssSelector("label#Active: SchoolAuthorizeNPTEScoreRelease()");
+        
+        private IWebElement cancelButton => driver.FindElementByXPath("//*[@id='main - body']/div[3]/div/div[1]/button");
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='main - body']/div[3]/div/div[1]/button")]
-        private IWebElement cancelButton;
-
-        [FindsBy(How = How.XPath, Using = "//*[@id='updateProfile']")]
-        private IWebElement continueButton;
+        private IWebElement continueButton => driver.FindElementByXPath("//*[@id='updateProfile']");
 
         #endregion PageElements
 
