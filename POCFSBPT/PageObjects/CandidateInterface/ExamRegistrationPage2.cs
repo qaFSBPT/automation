@@ -21,7 +21,6 @@ namespace POCFSBPT.PageObjects
         public ExamRegistrationPage2(RemoteWebDriver driver)
         {
             this.driver = driver;
-            PageFactory.InitElements(driver, this);
         }
 
         // Page Elements
