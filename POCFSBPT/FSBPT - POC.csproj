@@ -84,6 +84,7 @@
     <Compile Include="PageObjects\CandidateInterface\Payment.cs" />
     <Compile Include="PageObjects\CandidateInterface\PaymentConfirmation.cs" />
     <Compile Include="PageObjects\CandidateInterface\PEATRegistration.cs" />
+    <Compile Include="PageObjects\CandidateInterface\Receipt.cs" />
     <Compile Include="PageObjects\CompactInterface\CompactDashboard.cs" />
     <Compile Include="PageObjects\CompactInterface\CompactHome.cs" />
     <Compile Include="PageObjects\JurisdictionInterface\JurisdictionHome.cs" />
